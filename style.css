@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
+:root {
+  --success-color: rgb(39, 219, 39);
+  --error-color: red;
+}
+
+* {
+  box-sizing: border-box; /*cause we dont want any padding to effect our width*/
+}
+body {
+  background-color: #dfcccc;
+  font-family: "Open Sans Condensed", sans-serif;
+  display: flex; /*to make it easier to put the container div in the middle*/
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /*this height: is realitive to both attributes above*/
+  margin: 0;
+}
+.container {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 2px 15px 0.2px; /*left top spread blur*/
+  width: 20rem;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form {
+  padding: 0 40px 20px 40px;
+}
+.form-control {
+  /*each input field*/
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+  position: relative;
+}
+.form-control label {
+  color: #777;
+  display: block;
+  margin: 1.5rem 0 0.5rem;
+}
+.form-control input {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+button {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  display: block;
+  border: none;
+  background-color: rgb(143, 195, 229);
+  color: white;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 5%;
+  width: 100%;
+}
+button:hover {
+  background-color: rgb(24, 95, 226);
+}
